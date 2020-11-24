@@ -7,7 +7,7 @@ const ButtonsBottom = (props) => {
         <div className="scroll-bottom">
             <div className="sb-main">
                 {props.left && (
-                    <NavLink to="{props.left}" className="left hover">
+                    <NavLink to={props.left} className="left hover">
                         <span> &#10092; </span>
                     </NavLink>
                 )}
