@@ -2,9 +2,12 @@ import React from 'react';
 
 const DynamicText = () => {
     return (
-        <div>
-            TEST
-        </div>
+        <span className="dynamic-text">
+            <span className="simply">
+                simply
+            </span>
+            <span id="text-target"></span>
+        </span>
     );
 };
 
