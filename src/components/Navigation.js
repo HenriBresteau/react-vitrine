@@ -8,6 +8,22 @@ const Navigation = () => {
                 <NavLink to="/" exact className="hover" activeClassName="nav-active">
                     <li>Accueil</li>
                 </NavLink>
+                <li className="nav-portfolio"> Porfolio
+                    <ul className="nav-projects">
+                        <NavLink to="/project-1" activeClassName="nav-active" className="hover">
+                            <li> Projet 1</li>
+                        </NavLink>
+                        <NavLink to="/project-2" activeClassName="nav-active" className="hover">
+                            <li> Projet 2</li>
+                        </NavLink>
+                        <NavLink to="/project-3" activeClassName="nav-active" className="hover">
+                            <li> Projet 3</li>
+                        </NavLink>
+                        <NavLink to="/project-4" activeClassName="nav-active" className="hover">
+                            <li> Projet 4</li>
+                        </NavLink>
+                    </ul>
+                </li>
             </ul>
             
         </div>
