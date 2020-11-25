@@ -71,7 +71,7 @@ const Project = (props) => {
                 initial="inital"
                 animate="visible"
                 variants={imgAnim}
-                transition={{duration:0.5}}
+                transition={{duration:1.5}}
             >
                 <div className="img-container hover">
                     <span>
