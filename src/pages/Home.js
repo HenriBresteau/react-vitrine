@@ -21,7 +21,7 @@ const Home = () => {
       opacity: 0,
       transition: { duration: 0.3 },
       x: -100,
-    },
+    }
   };
 
   return (
