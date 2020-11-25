@@ -14,16 +14,24 @@ const App = () => {
 
       const wheelRouter = (after, before)=>{
         if (e.wheelDeltaY < 0) {
-          history.push(after);
+          setTimeout(() => {
+            history.push(after);
+          }, 500);
+          
         } else if (e.wheelDeltaY >0 ) {
-          history.push(before);
+          setTimeout(() => {
+            history.push(before);
+          }, 500);
+          
         }
       }
       
       switch (window.location.href.toString()) {
         case url:
             if (e.wheelDeltaY <0) {
-              history.push('project-1')
+              setTimeout(() => {
+                history.push('project-1')
+              }, 500);
             }
           break;
         case url+ "project-1":
@@ -40,7 +48,10 @@ const App = () => {
           break;
           case url+"contact":
             if (e.wheelDeltaY >0) {
-              history.push('project-4')
+              setTimeout(() => {
+                history.push('project-4')
+              }, 500);
+              
             }
             break;
         default:
