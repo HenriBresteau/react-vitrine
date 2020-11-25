@@ -36,6 +36,22 @@ const Contact = () => {
               </CopyToClipboard>
             </div>
           </div>
+          <div className="email">
+              <div className="content">
+              <h4>Email</h4>
+              <CopyToClipboard text="henri.bresteau@gmail.com" className="hover">
+                <p
+                  style={{ cursor: "pointer" }}
+                  className="clipboard"
+                  onClick={() => {
+                    alert("Email copié");
+                  }}
+                >
+                  henri.bresteau@gmail.com
+                </p>
+              </CopyToClipboard>
+              </div>
+          </div>
         </div>
       </div>
     </main>
