@@ -67,7 +67,7 @@ const ContactForm = () => {
     let formMess = document.querySelector(".form-message");
 
     window.emailjs
-      .send("gmail", templateId, variables)
+      .send("service_yt1tv3x", templateId, variables)
       .then((res) => {
         formMess.innerHTML =
           "Message envoyé ! Nous vous recontacterons dès que possible.";
