@@ -3,6 +3,7 @@ import { Redirect, Route, Switch, useHistory, useLocation } from 'react-router-d
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import { Project1, Project2, Project3, Project4 } from './pages/Projects';
+import {AnimatePrescence} from 'framer-motion';
 
 const App = () => {
   const location = useLocation();
@@ -62,7 +63,7 @@ const App = () => {
     window.addEventListener('wheel', handleScrollToElement)
   }, [history])
   return (
-    
+    <AnimatePrescence>
       <Switch location={location} key={location.pathname}>
         <Route exact path="/" component={Home} />
         <Route exact path="/project-1" component={Project1} />
@@ -72,7 +73,7 @@ const App = () => {
         <Route exact path="/contact" component={Contact} />
         <Redirect to="/" />
       </Switch>
-    
+    </AnimatePrescence>
   );
 };
 
