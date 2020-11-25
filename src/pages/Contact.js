@@ -3,6 +3,7 @@ import Logo from "../components/Logo";
 import Mouse from "../components/Mouse";
 import Navigation from "../components/Navigation";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import SocialNetwork from "../components/SocialNetwork";
 
 const Contact = () => {
   return (
@@ -52,6 +53,7 @@ const Contact = () => {
               </CopyToClipboard>
               </div>
           </div>
+          <SocialNetwork></SocialNetwork>
         </div>
       </div>
     </main>
