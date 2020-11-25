@@ -4,6 +4,7 @@ import Mouse from "../components/Mouse";
 import Navigation from "../components/Navigation";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import SocialNetwork from "../components/SocialNetwork";
+import ButtonsBottom from "../components/ButtonsBottom";
 
 const Contact = () => {
   return (
@@ -54,7 +55,11 @@ const Contact = () => {
               </div>
           </div>
           <SocialNetwork></SocialNetwork>
+          <div className="credits">
+              <p> &copy; Henri Bresteau - 2020</p>
+          </div>
         </div>
+        <ButtonsBottom left={'/project-4'}></ButtonsBottom>
       </div>
     </main>
   );
