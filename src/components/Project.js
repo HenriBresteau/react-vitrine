@@ -26,16 +26,20 @@ const Project = (props) => {
           transition: {duration:0.35},
           x:-800
         }
-    
       }
-
+      const transition = {
+          ease:[0.03,0.87,0.73,0.9],
+          duration:0.6
+      }
     return (
         <motion.div 
             className="project-main"
             initial="inital"
             animate="animate"
             exit="exit"
-            variants={variants}>
+            variants={variants}
+            transition={transition}
+        >
             <div className="project-content">
                 <h1>
                     {project.title}
