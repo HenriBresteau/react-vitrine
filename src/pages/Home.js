@@ -14,7 +14,7 @@ const Home = () => {
       x: 100,
     },
     visible: {
-      opactiy: 1,
+      opacity: 1,
       x: 0,
     },
     exit: {
@@ -38,10 +38,10 @@ const Home = () => {
         <SocialNetwork></SocialNetwork>
         <div className="home-main">
           <div className="main-content">
-            <h1>FS Acency</h1>
-            <h2>
+            <motion.h1 drag onDrag dragConstraints={{ left:-250, right:950, top:-200, bottom:250}}>FS Acency</motion.h1>
+            <motion.h2 drag onDrag dragConstraints={{ left:-250, right:950, top:-200, bottom:250}}>
               <DynamicText></DynamicText>
-            </h2>
+            </motion.h2>
           </div>
         </div>
         <ButtonsBottom right={"/project-1"}></ButtonsBottom>
