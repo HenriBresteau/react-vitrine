@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { projectsData } from '../data/projectsData';
 
@@ -10,8 +11,31 @@ const Project = (props) => {
     let top = Math.floor(Math.random()* 200 + 150)+"px";
     let size= `scale(${Math.random() + 0.7})`;
 
+    const variants = {
+        initial: {
+          opacity:0,
+          transition: {duration:0.5},
+          x:200,
+        },
+        visible :{
+          opactiy:1,
+          x:0,
+        },
+        exit: {
+          opacity:0.4,
+          transition: {duration:0.35},
+          x:-800
+        }
+    
+      }
+
     return (
-        <div className="project-main">
+        <motion.div 
+            className="project-main"
+            initial="inital"
+            animate="animate"
+            exit="exit"
+            variants={variants}>
             <div className="project-content">
                 <h1>
                     {project.title}
@@ -38,7 +62,7 @@ const Project = (props) => {
                 </div>
             </div>
             <span className="random-circle" style={{left,top,transform:size}}></span>
-        </div>
+        </motion.div>
     );
 };
 
