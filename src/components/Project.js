@@ -27,6 +27,21 @@ const Project = (props) => {
           x:-800
         }
       }
+      let plusMinus = Math.random() > 0.4 ? 1 : -1
+      let imgX = Math.random() * 350 * plusMinus;
+      let imgY = Math.random() * 120 * plusMinus;
+      const imgAnim = {
+          inital:{
+              opacity:0,
+              x:imgX,
+              y:imgY,
+          },
+          visible: {
+              opacity:1,
+              x:0,
+              y:0
+          }
+      }
       const transition = {
           ease:[0.03,0.87,0.73,0.9],
           duration:0.6
@@ -35,7 +50,7 @@ const Project = (props) => {
         <motion.div 
             className="project-main"
             initial="inital"
-            animate="animate"
+            animate="visible"
             exit="exit"
             variants={variants}
             transition={transition}
@@ -51,7 +66,13 @@ const Project = (props) => {
                     })}
                 </ul>
             </div>
-            <div className="img-content">
+            <motion.div 
+                className="img-content"
+                initial="inital"
+                animate="visible"
+                variants={imgAnim}
+                transition={{duration:0.5}}
+            >
                 <div className="img-container hover">
                     <span>
                         <h3> {project.title} </h3>
@@ -64,7 +85,7 @@ const Project = (props) => {
                         <span className="button"> Voir le site</span>
                     </a>
                 </div>
-            </div>
+            </motion.div>
             <span className="random-circle" style={{left,top,transform:size}}></span>
         </motion.div>
     );
