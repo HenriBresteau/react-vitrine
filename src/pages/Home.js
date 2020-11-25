@@ -29,24 +29,22 @@ const Home = () => {
       <Mouse></Mouse>
       <motion.div
         className="home"
-        initial="inital"
+        initial="initial"
         animate="visible"
         exit="exit"
         variants={variants}
       >
-        <div className="home">
-          <Navigation></Navigation>
-          <SocialNetwork></SocialNetwork>
-          <div className="home-main">
-            <div className="main-content">
-              <h1>FS Acency</h1>
-              <h2>
-                <DynamicText></DynamicText>
-              </h2>
-            </div>
+        <Navigation></Navigation>
+        <SocialNetwork></SocialNetwork>
+        <div className="home-main">
+          <div className="main-content">
+            <h1>FS Acency</h1>
+            <h2>
+              <DynamicText></DynamicText>
+            </h2>
           </div>
-          <ButtonsBottom right={"/project-1"}></ButtonsBottom>
         </div>
+        <ButtonsBottom right={"/project-1"}></ButtonsBottom>
       </motion.div>
     </main>
   );
